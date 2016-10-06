@@ -1,0 +1,19 @@
+version: '2'
+services:
+  web:
+    build: .
+    command: puma -p 5000
+    volumes:
+      - .:/app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    environment:
+      SECRET_TOKEN: 913823a4e5b81b9167e44814ac9cb702
+  db:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: password
