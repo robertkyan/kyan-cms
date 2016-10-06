@@ -41,6 +41,15 @@ The minimum set of editable content for a Page is:
 * Image uploads/gallery
 * Meta data (title / keywords / description)
 
+Default generation for Pages:
+```
+./bin/rails g model Page title:string introduction:text published:boolean publish_on:date body:text meta_title:string meta_keywords:text meta_description:tex
+```
+and then add to Active Admin with:
+```
+./bin/rails g active_admin:resource Page
+```
+
 ### News Articles / Events
 
 New article are another type of page that should be created by default.  They are generally always built the same way and
