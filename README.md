@@ -41,4 +41,15 @@ The minimum set of editable content for a Page is:
 * Image uploads/gallery
 * Meta data (title / keywords / description)
 
+### News Articles / Events
 
+New article are another type of page that should be created by default.  They are generally always built the same way and
+share a lot of similarities with [Pages](#pages) with a few differences:
+* Publish/unpublish check box
+* Publish date
+* Unpublish date
+* Event date (i.e. if the article relates to an Event on a specific day)
+* Body - WYSIWYG editor
+* Image uploads/gallery
+* File download (PDF etc)
+* Meta data (title / keywords / description)
