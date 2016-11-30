@@ -28,6 +28,10 @@ gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'acts_as_list'
 gem 'devise'
 
+# Styling gems
+gem 'normalize-rails'
+gem 'foundation-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

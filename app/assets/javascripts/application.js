@@ -12,5 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+
+// Foundation plugins here
+//= require foundation.core
+//= require foundation.util.mediaQuery
+
+// Plugins here
+
+// Kyan scripts here
+//= require ./application/site

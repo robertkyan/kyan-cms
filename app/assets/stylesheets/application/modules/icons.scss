@@ -1,0 +1,7 @@
+.icon {
+  display: inline-block;
+  background: no-repeat center transparent;
+  &.icon-twitter {
+    background-image: image-url('svg/twitter.svg');
+  }
+}
