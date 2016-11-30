@@ -107,9 +107,6 @@ The default full Page model contains (bold are considered required):
 * `label:string`
 * `title:string`
 * introduction:text
-* published:boolean
-* publish_on:date
-* banner_image:string
 * has_body:boolean
 * body:text
 * `page_title:string`
@@ -117,7 +114,7 @@ The default full Page model contains (bold are considered required):
 
 Default generation for Pages:
 ```
-./bin/rails g model Page label:string title:string introduction:text published:boolean publish_on:date banner_image:string body:text page_title:string meta_description:text
+./bin/rails g model Page label:string title:string introduction:text body:text page_title:string meta_description:text
 ```
 and then add to Active Admin with:
 ```
@@ -138,8 +135,6 @@ ActiveAdmin.register Page do
   actions :index, :show, :edit, :update
   batch_action :destroy, false
   permit_params :title, :body, :body, :page_title, :meta_description,
-  :introduction, :banner_image,
-  :banner_image_cache, :remove_banner_image
 
   controller do
     def find_resource
@@ -155,16 +150,14 @@ ActiveAdmin.register Page do
   end
 
   form(html: { multipart: true }) do |f|
-    inputs t('active_admin.common.details') do
+    inputs do
       input :title
       input :introduction
-      input :banner_image, as: :file, hint: image_tag_or(f.object.banner_image.admin_thumb, 'Page header images should be 1360px(w) x 700px(h)')
-      input :remove_banner_image, as: :boolean if f.object.banner_image.present?
     end
-    inputs t('active_admin.common.contents') do
+    inputs do
       input :body, input_html: { class: 'redactorbox' }
     end
-    inputs t('active_admin.common.search_engine_optimisation') do
+    inputs do
       input :page_title
       input :meta_description
     end
@@ -172,19 +165,16 @@ ActiveAdmin.register Page do
   end
 
   show do
-    panel t('active_admin.common.details') do
+    panel 'Details' do
       attributes_table_for page do
         row :title
         row :introduction
-        row :banner_image do |i|
-          image_tag_or(i.banner_image)
-        end
       end
     end
-    panel t('active_admin.common.contents') do
+    panel 'Contents' do
       page.body.html_safe
     end
-    panel t('active_admin.common.search_engine_optimisation') do
+    panel 'SEO' do
       attributes_table_for page do
         row :page_title
         row :meta_description
