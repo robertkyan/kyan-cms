@@ -1,0 +1,12 @@
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+// Cancel weird Foundation styles
+.column:last-child:not(:first-child), 
+.columns:last-child:not(:first-child) {
+  float: left;
+}
+.column.row.row, .row.row.columns {
+  float: none;
+}

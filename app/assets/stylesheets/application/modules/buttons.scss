@@ -1,0 +1,17 @@
+.button {
+  display: inline-block;
+  padding: 1.4rem 4rem;
+  background-color: $black;
+  color: $white;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  &:hover,
+  &:focus,
+  &:active {
+
+  }
+}

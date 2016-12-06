@@ -1,0 +1,37 @@
+// Colours
+$black: #000;
+$white: #FFF;
+
+// Fonts
+$headingFont: sans-serif;
+$bodyFont: sans-serif;
+
+// Z-Indexes
+$behindZ: -1;
+$baseZ: 1;
+$smallZ: 10;
+$midZ: 100;
+$largeZ: 1000;
+$massiveZ: 100000000; // Must be on top
+
+// Imports
+@import "foundation_and_overrides";
+@import "settings";
+
+// Layout / Generic Styling
+@import "pages/layout";
+@import "modules/utilities";
+@import "modules/typography";
+@import "modules/buttons";
+@import "modules/icons";
+
+// Global Elements
+@import "modules/header";
+@import "modules/footer";
+
+// Components
+
+// Pages
+@import "pages/home";
+
+@import "pages/print";

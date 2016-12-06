@@ -1,0 +1,77 @@
+body {
+  font-family: $bodyFont;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #000;
+}
+
+h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
+  margin-bottom: 2rem;
+  font-family: $headingFont;
+} 
+h1, .h1 {
+  font-size: 3.6rem;
+}
+h2, .h2 {
+  font-size: 1.8rem;
+}
+h3, .h3 {
+  font-size: 1.8rem;
+}
+h4, .h4 {
+  font-size: 1.8rem;
+}
+
+p {
+
+}
+
+a {
+  &:hover,
+  &:active,
+  &:focus {
+  
+  }
+}
+
+ul {
+  margin: 0;
+  list-style-type: none;
+  li {
+    
+  }
+}
+
+label {
+  font-size: 1.6rem;
+}
+
+blockquote {
+  padding: 0;
+  border-left-width: 0;
+  p {
+    font-size: 2.2rem;
+    font-style: italic;
+  }
+  cite {
+    font-size: 2.2rem;
+    font-style: normal;
+  }
+}
+
+address {
+  margin-bottom: 2rem;
+  font-style: normal;
+}
+
+.error {
+  color: red;
+}
+
+@media #{breakpoint(medium down)} {
+
+}
+
+@media #{breakpoint(small down)} {
+
+}
