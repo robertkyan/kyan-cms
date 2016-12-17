@@ -11,5 +11,6 @@ var siteName = {
 }
 
 $(document).ready(function() {
+  $(document).foundation();
   siteName.init();
 });
